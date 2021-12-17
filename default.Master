@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="BioData._default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    
+    <script src="jquery-3.3.1/jquery-3.3.1.js"></script>
+    <link href="css/BioData.css" rel="stylesheet" />
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">EDS: BioData</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.aspx">Home</a>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="hlSetting" runat="server" class="nav-link" NavigateUrl="settings.aspx">Settings</asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="hlAdmin" runat="server" class="nav-link" NavigateUrl="admin.aspx">Admin</asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="hlAdminMob" runat="server" class="nav-link" NavigateUrl="adminmob.aspx">Mobile Admin</asp:HyperLink>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
